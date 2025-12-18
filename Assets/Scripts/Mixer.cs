@@ -3,9 +3,9 @@ using UnityEngine.Audio;
 
 public class Mixer : MonoBehaviour
 {
-    private const float MinVolume = -80f;
-    
     [SerializeField] private AudioMixer _mixer;
+    
+    private const float MinVolume = -80f;
     
     private float _currentVolume;
     
