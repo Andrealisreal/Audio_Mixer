@@ -6,6 +6,7 @@ public class Mixer : MonoBehaviour
     [SerializeField] private AudioMixer _mixer;
     
     private const float MinVolume = -80f;
+    private const float SoundMultiplier = 20f;
     
     private float _currentVolume;
     
@@ -16,7 +17,7 @@ public class Mixer : MonoBehaviour
     
     public void SetVolume(string exposedParameter, float sliderValue)
     {
-        _currentVolume = Mathf.Log10(sliderValue) * 20;
+        _currentVolume = Mathf.Log10(sliderValue) * SoundMultiplier;
         _mixer.SetFloat(exposedParameter, _currentVolume);
     }
 }
