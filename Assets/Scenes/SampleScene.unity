@@ -333,6 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 164984023}
   - component: {fileID: 164984024}
+  - component: {fileID: 164984025}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -409,6 +410,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!114 &164984025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164984022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6457a1f35ccb6e7468ad26f15059c656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToggleSwitcher
+  _mixer: {fileID: 1818778751}
+  _exposedParameter: MasterVolume
 --- !u!1 &172632069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,6 +1470,7 @@ GameObject:
   - component: {fileID: 528847846}
   - component: {fileID: 528847845}
   - component: {fileID: 528847844}
+  - component: {fileID: 528847847}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1564,6 +1580,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528847842}
   m_CullTransparentMesh: 1
+--- !u!114 &528847847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528847842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0bf8994520d59f47975a93c1e5e6c3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonEffect
+  _audioSource: {fileID: 285005585}
 --- !u!1 &578958001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,6 +1929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718791212}
   - component: {fileID: 718791213}
+  - component: {fileID: 718791214}
   m_Layer: 5
   m_Name: Slider (1)
   m_TagString: Untagged
@@ -1981,6 +2011,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &718791214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718791211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24fa5392565bc234dbd67a223330582c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SliderChanger
+  _mixer: {fileID: 1818778751}
+  _exposedParameter: MasterVolume
 --- !u!1 &752781321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2384,6 +2428,7 @@ GameObject:
   - component: {fileID: 869929393}
   - component: {fileID: 869929392}
   - component: {fileID: 869929391}
+  - component: {fileID: 869929394}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -2493,6 +2538,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869929389}
   m_CullTransparentMesh: 1
+--- !u!114 &869929394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869929389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0bf8994520d59f47975a93c1e5e6c3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonEffect
+  _audioSource: {fileID: 85626312}
 --- !u!1 &892111249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,6 +2561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 892111250}
   - component: {fileID: 892111251}
+  - component: {fileID: 892111252}
   m_Layer: 5
   m_Name: Slider (2)
   m_TagString: Untagged
@@ -2584,6 +2643,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &892111252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892111249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24fa5392565bc234dbd67a223330582c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SliderChanger
+  _mixer: {fileID: 1818778751}
+  _exposedParameter: SoundEffects
 --- !u!1 &1014254053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,18 +3563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16235b3ef787e97408e7d01b3a8430d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mixer
-  _mixer: {fileID: 24300002, guid: 9b67492e9d0e3854398fcc902a90d341, type: 2}
-  _muteSoundToggle: {fileID: 164984024}
-  _effectButtonOne: {fileID: 528847844}
-  _effectButtonTwo: {fileID: 869929391}
-  _effectButtonThree: {fileID: 2120169275}
-  _globalVolumeSliders: {fileID: 718791213}
-  _musicVolumeSliders: {fileID: 1893758933}
-  _sfxVolumeSliders: {fileID: 892111251}
-  _audioSources:
-  - {fileID: 285005585}
-  - {fileID: 85626312}
-  - {fileID: 1119905677}
+  _mixer: {fileID: 24100000, guid: 9b67492e9d0e3854398fcc902a90d341, type: 2}
 --- !u!4 &1818778752
 Transform:
   m_ObjectHideFlags: 0
@@ -3563,6 +3625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893758932}
   - component: {fileID: 1893758933}
+  - component: {fileID: 1893758934}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -3644,6 +3707,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1893758934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893758931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24fa5392565bc234dbd67a223330582c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SliderChanger
+  _mixer: {fileID: 1818778751}
+  _exposedParameter: BackgroundMusic
 --- !u!1 &1932744561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3692,6 +3769,7 @@ GameObject:
   - component: {fileID: 2120169277}
   - component: {fileID: 2120169276}
   - component: {fileID: 2120169275}
+  - component: {fileID: 2120169278}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -3801,6 +3879,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120169273}
   m_CullTransparentMesh: 1
+--- !u!114 &2120169278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120169273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0bf8994520d59f47975a93c1e5e6c3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonEffect
+  _audioSource: {fileID: 1119905677}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
