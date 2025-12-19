@@ -422,8 +422,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6457a1f35ccb6e7468ad26f15059c656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ToggleSwitcher
+  _audioMixerGroup: {fileID: 24300002, guid: 9b67492e9d0e3854398fcc902a90d341, type: 2}
   _mixer: {fileID: 1818778751}
-  _exposedParameter: MasterVolume
 --- !u!1 &172632069
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,8 +2023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24fa5392565bc234dbd67a223330582c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SliderChanger
+  _audioMixerGroup: {fileID: 24300002, guid: 9b67492e9d0e3854398fcc902a90d341, type: 2}
   _mixer: {fileID: 1818778751}
-  _exposedParameter: MasterVolume
 --- !u!1 &752781321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,8 +2655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24fa5392565bc234dbd67a223330582c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SliderChanger
+  _audioMixerGroup: {fileID: 6724546059099935160, guid: 9b67492e9d0e3854398fcc902a90d341, type: 2}
   _mixer: {fileID: 1818778751}
-  _exposedParameter: SoundEffects
 --- !u!1 &1014254053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3449,8 +3449,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1893758932}
   - {fileID: 718791212}
+  - {fileID: 1893758932}
   - {fileID: 892111250}
   m_Father: {fileID: 752781325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3563,7 +3563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16235b3ef787e97408e7d01b3a8430d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mixer
-  _mixer: {fileID: 24100000, guid: 9b67492e9d0e3854398fcc902a90d341, type: 2}
+  _mixer: {fileID: 24300002, guid: 9b67492e9d0e3854398fcc902a90d341, type: 2}
 --- !u!4 &1818778752
 Transform:
   m_ObjectHideFlags: 0
@@ -3719,8 +3719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24fa5392565bc234dbd67a223330582c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SliderChanger
+  _audioMixerGroup: {fileID: 441296481147263189, guid: 9b67492e9d0e3854398fcc902a90d341, type: 2}
   _mixer: {fileID: 1818778751}
-  _exposedParameter: BackgroundMusic
 --- !u!1 &1932744561
 GameObject:
   m_ObjectHideFlags: 0

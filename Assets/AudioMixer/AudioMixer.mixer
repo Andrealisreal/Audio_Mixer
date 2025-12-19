@@ -33,7 +33,7 @@ AudioMixerController:
   - guid: c35c9e64f0c5b5743bd31ef8f886b8c0
     name: SoundEffects
   - guid: 39ff4c9c7ee54ad4cbfa6c443cb6558b
-    name: MasterVolume
+    name: Master
   - guid: 9a824894622d6d64e876d4acd1fd540a
     name: BackgroundMusic
   m_AudioMixerGroupViews:
