@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class ToggleSwitcher : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup _audioMixerGroup;
     [SerializeField] private Mixer _mixer;
-    [SerializeField] private string _exposedParameter = "MasterVolume";
     
     private Toggle _toggle;
 
@@ -15,16 +16,11 @@ public class ToggleSwitcher : MonoBehaviour
 
     private void OnEnable()
     {
-        _toggle.onValueChanged.AddListener(OnSetSoundEnabled);
+        _toggle.onValueChanged.AddListener(_mixer.SetSoundEnabled);
     }
 
     private void OnDisable()
     {
-        _toggle.onValueChanged.RemoveListener(OnSetSoundEnabled);
-    }
-
-    private void OnSetSoundEnabled(bool value)
-    {
-        _mixer.SetSoundEnabled(_exposedParameter, value);
+        _toggle.onValueChanged.RemoveListener(_mixer.SetSoundEnabled);
     }
 }

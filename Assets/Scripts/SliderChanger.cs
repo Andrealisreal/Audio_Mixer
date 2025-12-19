@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SliderChanger : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup _audioMixerGroup;
     [SerializeField] private Mixer _mixer;
-    [SerializeField] private string _exposedParameter = "MasterVolume";
     
     private const float MinValue = 0.0001f;
     
@@ -28,6 +29,6 @@ public class SliderChanger : MonoBehaviour
 
     private void OnSliderValueChanged(float value)
     {
-        _mixer.SetVolume(_exposedParameter, value);
+        _mixer.SetVolume(_audioMixerGroup.name, value);
     }
 }

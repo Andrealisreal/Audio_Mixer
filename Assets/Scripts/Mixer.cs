@@ -3,21 +3,20 @@ using UnityEngine.Audio;
 
 public class Mixer : MonoBehaviour
 {
-    [SerializeField] private AudioMixer _mixer;
+    [SerializeField] private AudioMixerGroup _mixer;
     
     private const float MinVolume = -80f;
     private const float SoundMultiplier = 20f;
     
-    private float _currentVolume;
-    
-    public void SetSoundEnabled(string exposedParameter, bool isEnabled)
+    public void SetSoundEnabled(bool isEnabled)
     {
-         _mixer.SetFloat(exposedParameter, isEnabled ? _currentVolume : MinVolume);
+        if (isEnabled == false)
+            _mixer.audioMixer.SetFloat(_mixer.name, MinVolume);
     }
     
     public void SetVolume(string exposedParameter, float sliderValue)
     {
-        _currentVolume = Mathf.Log10(sliderValue) * SoundMultiplier;
-        _mixer.SetFloat(exposedParameter, _currentVolume);
+        var volume = Mathf.Log10(sliderValue) * SoundMultiplier;
+        _mixer.audioMixer.SetFloat(exposedParameter, volume);
     }
 }
